@@ -2,9 +2,10 @@ package kode;
 
 import java.util.Random;
 
-public class RopeTests {
+class RopeTests {
 
     private static final String TEST_STRING = "The quick brown fox jumps over the lazy dog.";
+    private static final Random random = new Random();
 
     public static void test(){
         Rope r = new Rope();
@@ -29,7 +30,6 @@ public class RopeTests {
         assert r.toString().equals("Hello world!");
     }
 
-    private static final Random random = new Random();
     public static void randomizedTest(){
         Rope r = new Rope();
         StringBuilder b = new StringBuilder();

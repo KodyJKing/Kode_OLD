@@ -2,7 +2,7 @@ package kode;
 
 public class Rope {
 
-    private static final int MAX_STRING = 10;
+    private static final int MAX_STRING = 200;
 
     private Node root;
 
@@ -44,7 +44,7 @@ public class Rope {
     public void print(){
         root.print(0);
     }
-    private class Node{
+    private class Node {
         StringBuilder text;
         int size, depth;
         Node left, right;
