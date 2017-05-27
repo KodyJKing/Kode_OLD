@@ -84,6 +84,7 @@ public class Rope {
         void tryUnfork(){
             if(leaf() || size > MAX_STRING || !(left.leaf() && right.leaf()))
                 return;
+
             text = new StringBuilder();
             text.append(left.text);
             text.append(right.text);
@@ -162,7 +163,6 @@ public class Rope {
             if(leaf()){
                 text.delete(start, end);
                 recalculate();
-
             } else {
                 right.remove(start - left.size, end - left.size, this);
                 left.remove(start, end, this);
